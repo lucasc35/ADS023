@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aluno Online</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="danger">
+                    <ion-buttons slot="start">
+                        <ion-button href="lista-requerimentos.html">
+                            <ion-icon name="arrow-back"> 
+                            </ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+                    <ion-title>Novo</ion-title>
+                    <ion-buttons slot="end">
+                        <ion-button href="lista-requerimentos.html">
+                                <ion-text>Salvar</ion-text>
+                        </ion-button>
+                    </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content padding>
+            <ion-grid>
+                <ion-row>
+                        <ion-col size-md="6" offset-md="3">
+                            <ion-item>
+                                    <ion-label position="floating">Disciplina</ion-label>
+                                    <ion-select size-lg placeholder="Selecione uma">
+                                      <ion-select-option value="ADS023">ADS023 - Programação para Dispositivos Móveis></ion-select-option>
+                                      <ion-select-option value="RCT024">RCT024 - Gerência de Projetos</ion-select-option></ion-select>
+                            </ion-item>
+                            <ion-item>
+                                    <ion-label position="floating">Avaliação</ion-label>
+                                    <ion-select placeholder="Selecione uma">
+                                      <ion-select-option value="A1">A1</ion-select-option>
+                                      <ion-select-option value="A2">A2</ion-select-option>
+                                      <ion-select-option value="A3">A3</ion-select-option>
+                                    </ion-select>                                    
+                            </ion-item>
+                            <ion-item>
+                                <ion-label position="floating">Argumentação</ion-label>
+                                <ion-textarea></ion-textarea>
+                            </ion-item>
+                        </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+</body>
+</html>
