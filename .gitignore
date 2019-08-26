@@ -1,3 +1,5 @@
+node_modules/
+meuapp/
 # Built application files
 *.apk
 *.ap_
