@@ -9,7 +9,7 @@ import { AbasPage } from './abas.page';
 
 const routes: Routes = [
   {
-    path: 'abas',
+    path: '',
     component: AbasPage,
     children: [
       {
