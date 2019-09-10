@@ -10,7 +10,21 @@ import { MenuPage } from './menu.page';
 const routes: Routes = [
   {
     path: '',
-    component: MenuPage
+    component: MenuPage,
+    children: [
+      {
+        path: 'home',
+        loadChildren: '../home/home.module#HomePageModule'
+      },
+      {
+        path: 'opcoes',
+        loadChildren: '../opcoes/opcoes.module#OpcoesPageModule'    
+      },
+      {
+        path:'', 
+        redirectTo: 'home'
+      }
+    ]
   }
 ];
 
