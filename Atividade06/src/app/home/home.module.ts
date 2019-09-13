@@ -21,6 +21,6 @@ import { HomePage } from './home.page';
   declarations: [HomePage]
 })
 export class HomePageModule {
-  constructor(private menuCtrl: MenuController) {}
+  
 }
 
