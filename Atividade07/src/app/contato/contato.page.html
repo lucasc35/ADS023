@@ -5,13 +5,26 @@
 </ion-header>
 
 <ion-content>
+    <form [formGroup]="formulario">
   <ion-item>
     <ion-label position="floating">Nome</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="nome" required></ion-input>
+    <ion-note padding color="danger" *ngIf="formulario.get('nome').hasError('required') && (formulario.get('nome').dirty || formulario.get('nome').touched)">
+        <ion-icon name="information-circle-outline"></ion-icon>{{ mensagens_validacao.nome_required }}
+     </ion-note>
+     <ion-note padding color="danger" *ngIf="formulario.get('nome').hasError('minlength') && (formulario.get('nome').dirty || formulario.get('nome').touched)">
+        <ion-icon name="information-circle-outline"></ion-icon>{{ mensagens_validacao.nome_minlength }}
+     </ion-note>
   </ion-item>
   <ion-item>
     <ion-label position="floating">E-mail</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="email" required></ion-input>
+    <ion-note padding color="danger" *ngIf="formulario.get('email').hasError('required') && (formulario.get('email').dirty || formulario.get('email').touched)">
+        <ion-icon name="information-circle-outline"></ion-icon>{{ mensagens_validacao.email_required }}
+     </ion-note>
+     <ion-note padding color="danger" *ngIf="formulario.get('email').hasError('pattern') && (formulario.get('email').dirty || formulario.get('email').touched)">
+        <ion-icon name="information-circle-outline"></ion-icon>{{ mensagens_validacao.email_pattern }}
+     </ion-note>
   </ion-item>
   <ion-list>
       <ion-radio-group>
@@ -85,11 +98,15 @@
     </ion-list>
     <ion-item>
         <ion-label position="floating">Telefone</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" formControlName="telefone" required></ion-input>
+        <ion-note padding color="danger" *ngIf="formulario.get('telefone').hasError('required') && (formulario.get('telefone').dirty || formulario.get('telefone').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>{{ mensagens_validacao.telefone_required }}
+         </ion-note>
       </ion-item>
       <ion-item>
         <ion-label>Aceito os termos do contato</ion-label>
         <ion-checkbox checked="true"></ion-checkbox>
       </ion-item>
-      <ion-button (click)="salvar()" color="success">Salvar</ion-button>
+      <ion-button (click)="salvar()" [disabled]="!formulario.valid" color="success">Salvar</ion-button>
+    </form>
 </ion-content>
