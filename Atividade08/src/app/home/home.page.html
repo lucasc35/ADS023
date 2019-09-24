@@ -13,6 +13,6 @@
   </div>
   <ion-item>
     <ion-label></ion-label> 
-   <ion-toogle checked="statusBluetooth"></ion-toogle>
+   <ion-toggle (click)="ligaBluetooth($event.target.checked)" checked="statusBluetooth"></ion-toggle>
   </ion-item>
 </ion-content>
