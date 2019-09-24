@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <ion-button (click)='getAlunos()'>Listar</ion-button>
+    <ion-list>
+        <ion-item *ngFor="let aluno of alunos; let i = index">
+          <ion-text>{{ aluno.matricula }} - {{ aluno.nome }}</ion-text>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+
