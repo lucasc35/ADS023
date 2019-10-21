@@ -12,29 +12,29 @@ import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 class MainActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        println("onCreate disparado...");
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState)
+        println("onCreate disparado...")
+        setContentView(R.layout.activity_main)
     }
     override fun onStart() {
- super.onStart();
-        println("onStart disparado...");
+ super.onStart()
+        println("onStart disparado...")
  }
     override fun onResume() {
- super.onResume();
-        println("onResume disparado...");
+ super.onResume()
+        println("onResume disparado...")
  }
     override fun onPause() {
- super.onPause();
-        println("onPause disparado...");
+ super.onPause()
+        println("onPause disparado...")
  }
     override fun onStop() {
- super.onStop();
-        println("onStop disparado...");
+ super.onStop()
+        println("onStop disparado...")
  }
     override fun onDestroy() {
- super.onDestroy();
-        println("onDestroy disparado...");
+ super.onDestroy()
+        println("onDestroy disparado...")
  }
 
 }
