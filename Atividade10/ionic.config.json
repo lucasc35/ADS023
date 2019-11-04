@@ -1,0 +1,8 @@
+{
+  "name": "Atividade10",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
